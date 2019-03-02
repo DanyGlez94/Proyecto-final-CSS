@@ -89,6 +89,7 @@ header h1{
   background-color: #D5C75F;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 .columnas div{
@@ -106,7 +107,6 @@ header h1{
 }
 
 .columna1{
-
   width: 50%;
 }
 
@@ -154,6 +154,7 @@ header h1{
 .columna2 img:hover{
   -webkit-animation: columna2-animacion 1s;
   animation: columna2-animacion 1s;
+  animation-fill-mode: forwards;
   box-shadow: 2px 2px #82C3A6;
 }
 
@@ -194,6 +195,11 @@ footer{
   padding: 20px 0;
   display: flex;
   flex-flow: row wrap;
+}
+
+.contenedor > img{
+  width: 300px;
+  height: 200px;
 }
 
 .p1{
