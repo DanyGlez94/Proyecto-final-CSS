@@ -13,6 +13,7 @@ img{
   display: block;
   margin: auto;
   box-shadow: 2px 2px #02010A;
+  border: 1px solid black;
 }
 
 .contenido{
@@ -59,8 +60,11 @@ header h1{
   color: white;
   text-align: center;
   font-size: 25px;
-  text-decoration: none;
   font-weight: bold;
+}
+
+.activa{
+  text-decoration: none;
 }
 
 @media all and (max-width:420px) {
@@ -85,21 +89,18 @@ header h1{
   margin: 0;
   padding: 40px 0;
   width: 100%;
-  border: 1px;
   background-color: #D5C75F;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-.columnas div{
-  box-sizing: border-box;
-}
 
 .columnas > p{
   padding-top: 10px;
   margin: 0px;
   text-decoration: underline;
+  font-size: 20px;
 }
 
 .columnas a:visited{
