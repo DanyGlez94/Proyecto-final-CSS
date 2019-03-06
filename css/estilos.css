@@ -74,18 +74,6 @@ header{
   text-decoration: none;
 }
 
-@media all and (max-width:420px) {
-  header{
-    width: 100%;
-    text-align: center;
-    order: 1;
-  }
-  .menu{
-    width: 100%;
-    order: 2;
-  }
-}
-
 .imagen1{
   background-color: #82C3A6;
   padding: 20px 0;
@@ -112,8 +100,6 @@ header{
   margin-top: 10px;
 }
 
-/*Corregir esta parte de los tamaños de imagen*/
-
 .columnas a:visited{
   color: black;
 }
@@ -126,19 +112,6 @@ header{
   width: 50%;
 }
 
-@media all and (max-width:420px) {
-  .columna1{
-    width: 100%;
-    padding: 20px;
-    order: 1;
-  }
-  .columna2{
-    width: 100%;
-    padding: 20px;
-    order: 2;
-  }
-}
-
 .columna1 img{
   transition-property: rotate(10deg);
   transition-duration:1s;
@@ -148,9 +121,10 @@ header{
 .columna1 img:hover{
   transform: rotate(10deg);
   box-shadow: 2px 2px #82C3A6;
+  border: 1px solid #82C3A6;
 }
 
-@keyframes columna2-animacion {
+@-webkit-keyframes columna2-animacion {
   from{
     position: relative;
     left: 0px;
@@ -168,6 +142,7 @@ header{
   animation: columna2-animacion 1s;
   animation-fill-mode: forwards;
   box-shadow: 2px 2px #82C3A6;
+  border: 1px solid #82C3A6;
 }
 
 footer{
@@ -226,34 +201,14 @@ footer img{
   width: 25%;
 }
 
-@media all and (max-width:420px) {
-  .contacto{
-    width: 100%;
-    padding: 20px;
-    order: 1;
-  }
-  .terminos{
-    width: 100%;
-    padding: 20px;
-    order: 2;
-  }
-  .redes{
-    width: 100%;
-    padding: 20px;
-    order: 3;
-  }
-  .derechos{
-    width: 100%;
-    padding: 20px;
-    order: 4;
-  }
-}
-/*Estilos para las páginas paisajes y retratos*/
+/*Páginas paisajes y retratos*/
 
 .contenedor{
+  width: 100%;
   background-color: #D5C75F;
   padding: 20px 0;
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -274,7 +229,7 @@ footer img{
 }
 
 .p3{
-  width: 33.33%
+  width: 33.34%
 }
 
 .img1{
@@ -290,4 +245,63 @@ footer img{
 .img3{
   -webkit-filter:sepia(90%);
   filter: sepia(90%);
+}
+
+/*Versión móvil*/
+
+@media (max-width:900px) {
+  .contenido{
+    max-width: 95%;
+  }
+  header{
+    justify-content: center;
+    text-align: center;
+    order: 1;
+  }
+  .menu{
+    width: 100%;
+    order: 2;
+  }
+  .columna1{
+    width: 100%;
+    padding: 20px;
+    order: 1;
+  }
+  .columna2{
+    width: 100%;
+    padding: 20px;
+    order: 2;
+  }
+  .contacto{
+    width: 100%;
+    padding: 20px;
+    order: 1;
+  }
+  .terminos{
+    width: 100%;
+    padding: 20px;
+    order: 2;
+  }
+  .redes{
+    width: 100%;
+    padding: 20px;
+    order: 3;
+  }
+  .derechos{
+    width: 100%;
+    padding: 20px;
+    order: 4;
+  }
+  .p1{
+    width: 100%;
+    order: 1;
+  }
+  .p2{
+    width: 100%;
+    order: 3;
+  }
+  .p3{
+    width: 100%;
+    order: 2;
+  }
 }
