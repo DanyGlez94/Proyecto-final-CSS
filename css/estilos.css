@@ -1,17 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   font-family: 'Dancing Script';
   background-color: #02010A;
   font-size: 1.2em;
 }
 
-figure{
-  margin: 0;
-  padding: 0;
-}
-
 img{
-  display: block;
-  margin: auto;
   box-shadow: 2px 2px #02010A;
   border: 1px solid black;
 }
@@ -25,30 +24,37 @@ header{
   background-color: #5B7989;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-
-
+  padding: 20px;
   display: flex;
   flex-flow: row wrap;
-
   justify-content: space-between;
   align-items: center;
 }
 
 header h1{
   text-shadow: 2px 2px #02010A;
-  padding-left: 20px;
   color: white;
 }
 
-/*header::after{
-  content: '';
-  display: table;
-  clear: both;
-}*/
+
+@keyframes slide-in {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+header{
+  animation: slide-in 1s;
+}
 
 .menu{
   list-style-type: none;
-  padding-right: 20px;
 }
 
 .menu li{
@@ -61,6 +67,7 @@ header h1{
   text-align: center;
   font-size: 25px;
   font-weight: bold;
+  text-underline-position: under;
 }
 
 .activa{
@@ -81,27 +88,31 @@ header h1{
 
 .imagen1{
   background-color: #82C3A6;
-  padding: 40px 0;
+  padding: 20px 0;
+}
+
+.imagen1 img{
+    display: block;
+    margin: auto;
 }
 
 .columnas{
   text-align: center;
-  margin: 0;
-  padding: 40px 0;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-position: under;
+  padding: 20px 0;
   width: 100%;
   background-color: #D5C75F;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
 }
 
-
-.columnas > p{
-  padding-top: 10px;
-  margin: 0px;
-  text-decoration: underline;
-  font-size: 20px;
+.columnas a{
+  margin-top: 10px;
 }
+
+/*Corregir esta parte de los tamaños de imagen*/
 
 .columnas a:visited{
   color: black;
@@ -160,24 +171,42 @@ header h1{
 }
 
 footer{
+  padding: 20px;
   background-color: #C6D5C5;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
-  justify-content: center;
 }
 
-.contacto div{
-  box-sizing: border-box;
+footer div{
+  padding: 0 20px;
+  text-align: left;
 }
 
+footer a{
+  font-size: 16px;
+  color: black;
+  text-underline-position: under;
+}
+
+footer p{
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+footer img{
+  border: none;
+  box-shadow: none;
+  width: 15px;
+}
 .contacto{
   width: 25%;
 }
 
-.termino{
+.terminos{
   width: 25%;
 }
 
@@ -185,22 +214,55 @@ footer{
   width: 25%;
 }
 
+.redes a{
+  text-decoration: none;
+}
+
+.redes figcaption{
+  padding-top: 10px;
+}
+
 .derechos{
   width: 25%;
 }
 
-/*Estilos para la página paisaje*/
+@media all and (max-width:420px) {
+  .contacto{
+    width: 100%;
+    padding: 20px;
+    order: 1;
+  }
+  .terminos{
+    width: 100%;
+    padding: 20px;
+    order: 2;
+  }
+  .redes{
+    width: 100%;
+    padding: 20px;
+    order: 3;
+  }
+  .derechos{
+    width: 100%;
+    padding: 20px;
+    order: 4;
+  }
+}
+/*Estilos para las páginas paisajes y retratos*/
 
 .contenedor{
   background-color: #D5C75F;
   padding: 20px 0;
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.contenedor > img{
-  width: 300px;
-  height: 200px;
+.contenedor img{
+  margin: 15px;
+  display: block;
+  text-align: center;
+  width: 90%;
 }
 
 .p1{
@@ -216,25 +278,16 @@ footer{
 }
 
 .img1{
-  padding: 20px 10px;
+  -webkit-filter:blur(10px);
+  filter: blur(10px);
 }
 
-.img2{
-  padding: 20px 10px;
+.img2, .img4, .img6{
+  -webkit-filter:grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .img3{
-  padding: 20px 10px;
-}
-
-.img4{
-  padding: 20px 10px;
-}
-
-.img5{
-  padding: 20px 10px;
-}
-
-.img6{
-  padding: 20px 10px;
+  -webkit-filter:sepia(90%);
+  filter: sepia(90%);
 }
